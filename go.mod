@@ -1,4 +1,4 @@
-module nlapi-proto
+module github.com/fleanza74/test-proto
 
 go 1.15
 
