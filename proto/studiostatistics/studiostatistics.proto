@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package studiostatistics;
+
+option go_package = "github.com/fleanza74/test-proto/proto/studiostatistics";
+
+message StudioStatisticsRequest {
+    string sid = 1;
+    string api_key = 2;
+    int64 timestamp = 3;
+    string ip = 4;
+}
+
+message StudioStatisticsResponse {
+    string message = 1;
+}
+
+service StudioStatisticsService {
+    rpc UploadStatistics (StudioStatisticsRequest) returns (StudioStatisticsResponse) {}
+}
